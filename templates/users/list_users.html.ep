@@ -1,0 +1,7 @@
+<%= $msg %>
+<br />
+<br />
+% for my $item (@$users) {
+  <strong><%= $item->{username} %> <==></strong>
+  <strong><%= $item->{pass} %> <==></strong> 
+% }
