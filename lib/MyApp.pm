@@ -16,7 +16,7 @@ sub startup ($self) {
     $self->{ _dbh } = MyApp::Model::DB->new();
 
     return $self;
-}
+  }
 
   # Load configuration from config file
   my $config = $self->plugin('NotYAMLConfig');
@@ -30,7 +30,11 @@ sub startup ($self) {
 
   # Normal route to controller
   $r->get('/')->to('Example#welcome');
-  $r->get('/user')->to('Example#list_users');
+  $r->get('/users')->to('Users#list_users');
+  $r->get('/students')->to('Students#list_students');
+  $r->get('/add_students')->to('Students#add_students');
+  $r->post('/add_students')->to('Students#add');
+
 
 }
 

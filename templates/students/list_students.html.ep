@@ -1,0 +1,26 @@
+% layout 'default';
+<br />
+<br />
+<%= $msg %>
+<table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Tên</th>
+        <th>Ngày sinh</th>
+         <th>Email</th>
+        <th>Địa chỉ</th>
+        <th>Cập nhật</th>
+      </tr>
+    </thead>
+    <tbody >
+        % foreach my $item (@{$students}) {
+      <tr>  
+        <td><%= $item->{id_students} %></td>
+        <td><%= $item->{name_students} %></td>
+        <td><%= $item->{birthday} %></td>
+        <td><%= $item->{email} %></td>
+        <td><%= $item->{address} %></td>
+        <td><button>Sửa</button>|<button>Xóa</button></td>
+      </tr>
+    %}
