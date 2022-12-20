@@ -21,6 +21,6 @@
         <td><%= $item->{birthday} %></td>
         <td><%= $item->{email} %></td>
         <td><%= $item->{address} %></td>
-        <td><button>Sửa</button>|<button>Xóa</button></td>
+        <td><a href='edit_students/<%= $item->{id_students} %>'>Sửa</a>|<a href='delete_students'>Xóa</a></td>
       </tr>
     %}

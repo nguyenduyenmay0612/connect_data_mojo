@@ -34,6 +34,8 @@ sub startup ($self) {
   $r->get('/students')->to('Students#list_students');
   $r->get('/add_students')->to('Students#add_students');
   $r->post('/add_students')->to('Students#add');
+  $r->get('/edit_students/:id_students')->to('Students#edit_students');
+  $r->post('/edit_students')->to('Students#edit');
 
 
 }
